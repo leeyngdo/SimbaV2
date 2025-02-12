@@ -43,7 +43,7 @@ table.authors .authors-affiliation {display: block; font-size: 1.2em;}
 table.models {width: 100%; max-width: 800px; margin: auto; font-size: 1em; border-collapse: collapse;}
 tr.models {background-color: #fff; border: 1px solid #eaeaea;}
 tr.models td {padding: 6px 0; text-align: center;}
-a.btn {display: inline-block; min-width: 70px; font-family: "Google Sans", sans-serif; background-color:  rgb(47, 47, 47); color: white; padding: 8px 18px; font-size: 1.1em; font-weight: normal; border-radius: 32px;}
+a.btn {display: inline-block; min-width: 1em; font-family: "Google Sans", sans-serif; background-color:  rgb(47, 47, 47); color: white; padding: 8px 18px; font-size: 1em; font-weight: normal; border-radius: 1.2em;}
 a.btn:hover {background-color:  rgb(54, 54, 54);}
 a.btn-disabled {background-color: rgb(174, 174, 174) !important; color: rgb(234, 234, 234) !important;}
 a.btn-blue {background-color: #648ef6; color: white;}

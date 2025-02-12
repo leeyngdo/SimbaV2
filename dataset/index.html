@@ -5,9 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script>
 		window.onload = function() {
-			if (screen.width < 450) {
+			if (screen.width < 800) {
 				var mvp = document.getElementById('vp');
-				mvp.setAttribute('content','user-scalable=no,width=450');
+				mvp.setAttribute('content','user-scalable=no,width=800px');
 			}
 		}
 	</script>
@@ -76,16 +76,16 @@
 				We release two multi-task datasets with data from <span class="bold">80</span> and <span class="bold">30</span> tasks, respectively. The datasets are summarized below.
 			</p>
 		</div>
-		<table class="models">
+		<table class="models" style="min-width: 1em;">
 			<tbody>
 				<tr>
-					<th style="font-size: 0.8em;">Domains</th>
-					<th style="font-size: 0.8em;">Tasks</th>
-					<th style="font-size: 0.8em;">Embodiments</th>
-					<th style="font-size: 0.8em;">Episodes</th>
-					<th style="font-size: 0.8em;">Transitions</th>
-					<th style="font-size: 0.8em;">Size</th>
-					<th style="font-size: 0.8em;">Download</th>
+					<th style="font-size: min(1.0em, 2.5vw);">Domains</th>
+					<th style="font-size: min(1.0em, 2.5vw);">Tasks</th>
+					<th style="font-size: min(1.0em, 2.5vw);">Embodiments</th>
+					<th style="font-size: min(1.0em, 2.5vw);">Episodes</th>
+					<th style="font-size: min(1.0em, 2.5vw);">Transitions</th>
+					<th style="font-size: min(1.0em, 2.5vw);">Size</th>
+					<th style="font-size: min(1.0em, 2.5vw);">Download</th>
 				</tr>
 				<tr class="models">
 					<td>
@@ -339,7 +339,7 @@
 
 		<div class="wrap-collabsible">
 			<input id="collapsible-dmc" class="toggle" type="checkbox">
-			<label for="collapsible-dmc" class="lbl-toggle">Deepmind Control Suite Full List ($28$ tasks)</label>
+			<label for="collapsible-dmc" class="lbl-toggle" style="font-size: min(1.2em, 4.5vw);">Deepmind Control Suite Full List ($28$ tasks)</label>
 			<div class="collapsible-dmc-content">
 			  <div class="content-inner">
 				<table class="models">
