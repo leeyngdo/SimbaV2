@@ -2,6 +2,7 @@
 	<title>SimbaV2</title>
 	<meta property="og:title" content="SimbaV2:">
 	<meta property="og:description" content="Hyperspherical Normalization for Scalable Deep Reinforcement Learning">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -51,7 +52,7 @@
 		</tbody>
 	</table>
 	<div class="links" style="margin-top: -20px;">
-		<a href="https://arxiv.org" class="btn"><i class="fa">&#xf1c1;</i>&ensp;Paper</a><a href="https://github.com/joonleesky/scale_rl" class="btn"><i class="fa fa-github"></i>&ensp;Code</a>
+		<a href="https://arxiv.org" class="btn"><i class="fa">&#xf1c1;</i>&ensp;Paper</a><a href="https://github.com/joonleesky/scale_rl" class="btn"><i class="fa fa-github"></i>&ensp;Code</a><a href="./dataset" class="btn"><i class="fa fa-database"></i> Dataset</a>
 	</div>
 	<div class="content">
 		<div class="figure" style="height: 360px; background-image: url(images/overview.png);"></div>
@@ -80,18 +81,18 @@
 	<div class="hr"></div>
 	<div style="overflow: hidden">
 		<h2>SimbaV2 Architecture</h2>
-		<p class="architecture">
+		<div class="figure-caption" style="margin-bottom: -20px;">
 			We present <span class="bold simbav2">SimbaV2</span>, a novel RL architecture designed to stabilize non-stationary optimization by constraining weight, feature, and gradient norms. Building on the <span class="bold simba">Simba</span> architecture, which uses pre-layernorm residual blocks and weight decay to control the weight and feature norm growth, <span class="bold simbav2">SimbaV2</span> introduces two modifications:
 			<ul>
 				<li><strong>Hyperspherical Normalization.</strong> We replace all layer normalization with hyperspherical normalization (i.e., $\ell_2$-normalization) and project weights onto the unit-norm hypersphere after each gradient update. These changes ensure consistent effective learning rates across layers and eliminate the need for tuning weight regularization.</li><br>
-				<li><strong>Distributional Value Estimation with Reward Scaling.</strong> To address unstable gradient norms from varying reward scales, we integrate a distributional critic and apply reward scaling to ensure the unit variance of target values for both actor and critic.</li>
+				<li><strong>Distributional Value Estimation with Reward Scaling.</strong> To address unstable gradient norms from varying reward scales, we integrate a distributional critic and reward scaling to ensure the unit variance of target values for both actor and critic.</li>
 			</ul>
-		</p>
+		</div>
 		<div class="column-left">
 			<div class="figure" style="height: 720px; background-image: url(images/simbav2_architecture.png);"></div>
 		</div>
 		<div class="column-right">
-			<p class="architecture">
+			<div class="figure-caption" style="margin-bottom: -20px;">
 				<br>
 				<ul>
 					<li><strong>(a) RSNorm: </strong> Given an input observation $\boldsymbol{o}_t \in \mathbb{R}^{| \mathcal{O} |}$ and its running statistics $(\boldsymbol{\mu}_t, \boldsymbol{\sigma}_t^2)$, the observation is normalized as: 
@@ -121,7 +122,7 @@
 					$$
 					</li>
 				</ul>
-			</p>
+			</div>
 		</div>
 	</div>
 	<div class="hr"></div>
@@ -181,16 +182,16 @@
 				<div class="content-video" style="margin-bottom: 12px">
 					<div class="content-video-container">
 						<video playsinline="" autoplay="" loop="" preload="" muted="" width="45%">
-							<source src="videos/simbav2-ant-v4.mp4" type="video/mp4"/>
+							<source src="videos/mujoco/simbav2-ant-v4.mp4" type="video/mp4"/>
 						</video>
 						<video playsinline="" autoplay="" loop="" preload="" muted="" width="45%">
-							<source src="videos/simbav2-cheetah-v4.mp4" type="video/mp4"/>
+							<source src="videos/mujoco/simbav2-cheetah-v4.mp4" type="video/mp4"/>
 						</video></br>
 						<video playsinline="" autoplay="" loop="" preload="" muted="" width="45%">
-							<source src="videos/simbav2-humanoid-v4.mp4" type="video/mp4"/>
+							<source src="videos/mujoco/simbav2-humanoid-v4.mp4" type="video/mp4"/>
 						</video>
 						<video playsinline="" autoplay="" loop="" preload="" muted="" width="45%">
-							<source src="videos/simbav2-walker-v4.mp4" type="video/mp4"/>
+							<source src="videos/mujoco/simbav2-walker-v4.mp4" type="video/mp4"/>
 						</video>
 					</div>
 				</div>
@@ -200,16 +201,16 @@
 				<div class="content-video" style="margin-bottom: 12px">
 					<div class="content-video-container">
 						<video playsinline="" autoplay="" loop="" preload="" muted="" width="45%">
-							<source src="videos/simbav2-humanoid-stand.mp4" type="video/mp4"/>
+							<source src="videos/dmc/simbav2-humanoid-stand.mp4" type="video/mp4"/>
 						</video>
 						<video playsinline="" autoplay="" loop="" preload="" muted="" width="45%">
-							<source src="videos/simbav2-humanoid-walk.mp4" type="video/mp4"/>
+							<source src="videos/dmc/simbav2-humanoid-walk.mp4" type="video/mp4"/>
 						</video>
 						<video playsinline="" autoplay="" loop="" preload="" muted="" width="45%">
-							<source src="videos/simbav2-dog-trot.mp4" type="video/mp4"/>
+							<source src="videos/dmc/simbav2-dog-trot.mp4" type="video/mp4"/>
 						</video>
 						<video playsinline="" autoplay="" loop="" preload="" muted="" width="45%">
-							<source src="videos/simbav2-dog-run.mp4" type="video/mp4"/>
+							<source src="videos/dmc/simbav2-dog-run.mp4" type="video/mp4"/>
 						</video>
 					</div>
 				</div>
@@ -219,16 +220,16 @@
 				<div class="content-video" style="margin-bottom: 12px">
 					<div class="content-video-container">
 						<video playsinline="" autoplay="" loop="" preload="" muted="" width="45%">
-							<source src="videos/simbav2-myo-key-hard.mp4" type="video/mp4"/>
+							<source src="videos/myosuite/simbav2-myo-key-hard.mp4" type="video/mp4"/>
 						</video>
 						<video playsinline="" autoplay="" loop="" preload="" muted="" width="45%">
-							<source src="videos/simbav2-myo-reach-hard.mp4" type="video/mp4"/>
+							<source src="videos/myosuite/simbav2-myo-reach-hard.mp4" type="video/mp4"/>
 						</video></br>
 						<video playsinline="" autoplay="" loop="" preload="" muted="" width="45%">
-							<source src="videos/simbav2-myo-pen-hard.mp4" type="video/mp4"/>
+							<source src="videos/myosuite/simbav2-myo-pen-hard.mp4" type="video/mp4"/>
 						</video>
 						<video playsinline="" autoplay="" loop="" preload="" muted="" width="45%">
-							<source src="videos/simbav2-myo-obj-hard.mp4" type="video/mp4"/>
+							<source src="videos/myosuite/simbav2-myo-obj-hard.mp4" type="video/mp4"/>
 						</video>
 					</div>
 				</div>
@@ -238,16 +239,16 @@
 				<div class="content-video" style="margin-bottom: 12px">
 					<div class="content-video-container">
 						<video playsinline="" autoplay="" loop="" preload="" muted="" width="45%">
-							<source src="videos/simbav2-h1-crawl.mp4" type="video/mp4"/>
+							<source src="videos/hbench/simbav2-h1-crawl.mp4" type="video/mp4"/>
 						</video>
 						<video playsinline="" autoplay="" loop="" preload="" muted="" width="45%">
-							<source src="videos/simbav2-h1-balance-hard.mp4" type="video/mp4"/>
+							<source src="videos/hbench/simbav2-h1-balance-hard.mp4" type="video/mp4"/>
 						</video>
 						<video playsinline="" autoplay="" loop="" preload="" muted="" width="45%">
-							<source src="videos/simbav2-h1-stand.mp4" type="video/mp4"/>
+							<source src="videos/hbench/simbav2-h1-stand.mp4" type="video/mp4"/>
 						</video>
 						<video playsinline="" autoplay="" loop="" preload="" muted="" width="45%">
-							<source src="videos/simbav2-h1-sit-hard.mp4" type="video/mp4"/>
+							<source src="videos/hbench/simbav2-h1-sit-hard.mp4" type="video/mp4"/>
 						</video>
 					</div>
 				</div>
