@@ -1,7 +1,7 @@
 body {background-color: #fdfdfd; color: rgb(54, 54, 54); margin: 0; font-size: 1em;}
 h1, h2, h3, h4, h5 {text-align: center;}
-h1 {margin-bottom: 24px; font-size: 2.2em;}
-h2 {margin-top: 48px; font-weight: bold !important;}
+h1 {margin-bottom: 0.5em; font-size: 2.2em;}
+h2 {margin-top: 1em; font-weight: bold !important;}
 h1, h2, h3, h4, h5, a, p, span, body {font-weight: normal; font-family: "Google Sans", sans-serif;}
 .header {background-color: #fdfdfd; width: 100%; padding-top: 48px; padding-bottom: 8px;}
 .header-menu {background-color: #efeff3; width: 100%; padding: 16px 0;}
@@ -14,10 +14,16 @@ a, h2 {color: rgb(100, 142, 246); text-decoration: none;}
 a:hover {color: #fa6d6d;}
 .column-left {float: left; width: 50%;}
 .column-right {float: right; width: 50%;}
+@media (max-width: 920px) {
+    .column-left { float: none; width: 90%; } 
+    .column-right { float: none; width: 90%;} 
+ } 
+
 .nobreak {white-space: nowrap;}
 .hr {width: 100%; height: 1px; margin: 48px 0; background-color: #d6dbdf;}
 p {line-height: 1.4em; text-align: justify;}
-.abstract {max-width: 600px; margin: auto;}
+.abstract {max-width: 90%; margin: auto;}
+.citation {max-width: 90%; margin: auto;}
 .math {font-family: "Computer Modern Sans", sans-serif; font-style: italic;}
 sub, sup {line-height: 0;}
 .architecture-figure {width: 50%; min-height: 120px; margin: 36px 0; background-repeat: no-repeat; background-position: center; background-size: contain; float: left; clear: both;}
@@ -68,8 +74,6 @@ a.link-disabled {color: #ccc; pointer-events: none;}
 .tldr-container h2 {font-size: 2em; margin: 0 0 10px 0;}
 .tldr-container .tldr-content {font-size: 1.3em; width: 100%; display: inline-block; text-align: center; margin: 0;}
 footer {background-color: #efeff3; width: 100%; margin-top: 32px; padding-top: 16px; padding-bottom: 16px; text-align: center;}
-
-
 
 .wrap-collabsible {
     margin-bottom: 1.2rem 0;

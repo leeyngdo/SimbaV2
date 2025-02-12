@@ -2,6 +2,7 @@
 	<title>SimbaV2</title>
 	<meta property="og:title" content="SimbaV2:">
 	<meta property="og:description" content="Hyperspherical Normalization for Scalable Deep Reinforcement Learning">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -55,9 +56,9 @@
 	</div>
 	<div class="content">
 		<div class="figure" style="height: 360px; background-image: url(images/overview.png);"></div>
-		<div style="width: 600px; margin: auto; margin-top: -24px;">
+		<div style="width: 90%; margin: auto; margin-top: -2em;">
 			<p>
-				<span class="bold simbav2">Overview.</span> <span class="simbav2">SimbaV2</span> outperforms other RL algorithms, where performance scales as compute increases. The numbers below each dot indicate the update-to-data (UTD) ratio. <span class="simbav2">SimbaV2</span>, with UTD=1, achieves a performance of $0.848$, surpassing <span class="tdmpc2">TD-MPC2</span> ($0.749$), the most computationally intensive version of <span class="simba">Simba</span> ($0.818$), and <span class="bro">BRO</span> ($0.807$). The results show normalized returns, averaged over $57$ continuous control tasks from MuJoCo, DMC, MyoSuite, and HumanoidBench, each trained on $1$ million samples.
+				<span class="bold simbav2">Overview.</span> <span class="simbav2">SimbaV2</span> outperforms other RL algorithms, where performance scales as compute increases. The numbers below each dot indicate the update-to-data (UTD) ratio. <span class="simbav2">SimbaV2</span>, with UTD=1, achieves a performance of $0.848$, surpassing <span class="tdmpc2">TD-MPC2</span> ($0.749$), the most computationally intensive version of <span class="simba">Simba</span> ($0.818$), and <span class="bro">BRO</span> ($0.807$). The results show normalized returns, averaged over $57$ continuous control tasks from MuJoCo, DMControl, MyoSuite, and HumanoidBench, each trained on $1$ million samples.
 			</p>
 		</div>
 	</div>
@@ -80,7 +81,7 @@
 	<div class="hr"></div>
 	<div style="overflow: hidden">
 		<h2>SimbaV2 Architecture</h2>
-		<div class="figure-caption" style="margin-bottom: -20px;">
+		<div class="figure-caption" style="margin-bottom: -1em;">
 			We present <span class="bold simbav2">SimbaV2</span>, a novel RL architecture designed to stabilize non-stationary optimization by constraining weight, feature, and gradient norms. Building on the <span class="bold simba">Simba</span> architecture, which uses pre-layernorm residual blocks and weight decay to control the weight and feature norm growth, <span class="bold simbav2">SimbaV2</span> introduces two modifications:
 			<ul>
 				<li><strong>Hyperspherical Normalization.</strong> We replace all layer normalization with hyperspherical normalization (i.e., $\ell_2$-normalization) and project weights onto the unit-norm hypersphere after each gradient update. These changes ensure consistent effective learning rates across layers and eliminate the need for tuning weight regularization.</li><br>
@@ -88,12 +89,12 @@
 			</ul>
 		</div>
 		<div class="column-left">
-			<div class="figure" style="height: 720px; background-image: url(images/simbav2_architecture.png);"></div>
+			<div class="figure" style="height: 48em; background-image: url(images/simbav2_architecture.png);"></div>
 		</div>
 		<div class="column-right">
-			<div class="figure-caption" style="margin-bottom: -20px;">
+			<div class="figure-caption" style="margin-bottom: -1em;">
 				<br>
-				<ul>
+				<ul style="font-size: min(1.0em, 3.5vw);">
 					<li><strong>(a) RSNorm: </strong> Given an input observation $\boldsymbol{o}_t \in \mathbb{R}^{| \mathcal{O} |}$ and its running statistics $(\boldsymbol{\mu}_t, \boldsymbol{\sigma}_t^2)$, the observation is normalized as: 
 					$$
 					\boldsymbol{\bar{o}}_t = \text{RSNorm}(\boldsymbol{o}_t) = \frac{\boldsymbol{o}_t - \boldsymbol{\mu}_t}{\sqrt{\boldsymbol{\sigma}_t^2 + \epsilon}}.
@@ -165,7 +166,7 @@
 				<span class="bold simbav2">SimbaV2</span>, with an update-to-data (UTD) ratio of $2$, outperforms state-of-the-art RL algorithms across diverse continuous control benchmarks using fixed hyperparameters across all domains. <span class="bold simbav2">SimbaV2</span> delivers competitive performance in both online and offline RL while requiring significantly less training computation and offering faster inference times.
 			</p>
 		</div>
-		<div class="figure" style="height: 400px; background-image: url(images/benchmark.png);"></div>
+		<div class="figure" style="height: 36em; background-image: url(images/benchmark.png);"></div>
 		<div style="margin: auto;">
 	</div>
 	<div class="hr"></div>
@@ -173,12 +174,12 @@
 		<h2>SimbaV2 with Online RL</h2>
 		<div class="figure-caption">
 			<p>
-				We evaluate <span class="bold simbav2">SimbaV2</span> on <span class="bold">$57$</span> control tasks across $4$ task domains: <a href="https://ieeexplore.ieee.org/document/6386109">MuJoCo</a>, <a href="https://arxiv.org/abs/1801.00690">DMC</a>, <a href="https://sites.google.com/view/myosuite">MyoSuite</a>, and <a href="https://humanoid-bench.github.io/">HumanoidBench</a>. 
+				We evaluate <span class="bold simbav2">SimbaV2</span> on <span class="bold">$57$</span> control tasks across $4$ task domains: <a href="https://ieeexplore.ieee.org/document/6386109">MuJoCo</a>, <a href="https://arxiv.org/abs/1801.00690">DMControl</a>, <a href="https://sites.google.com/view/myosuite">MyoSuite</a>, and <a href="https://humanoid-bench.github.io/">HumanoidBench</a>. 
 			</p>
 		</div>
 		<div style="display: flex; justify-content: center; max-width: 1200px; margin: 0 auto;">
 			<div style="display: flex; flex-direction: column; align-items: center; width: 50%;">
-				<div class="content-video" style="margin-bottom: 12px">
+				<div class="content-video" style="margin-bottom: 0.1em">
 					<div class="content-video-container">
 						<video playsinline="" autoplay="" loop="" preload="" muted="" width="45%">
 							<source src="videos/mujoco/simbav2-ant-v4.mp4" type="video/mp4"/>
@@ -194,10 +195,10 @@
 						</video>
 					</div>
 				</div>
-				<p style="margin-top: 10px; font-weight: bold;">MuJoCo</p>
+				<p style="margin-top: 10px; font-weight: bold; font-size: min(1.0em, 2.5vw);">MuJoCo</p>
 			</div>
 			<div style="display: flex; flex-direction: column; align-items: center; width: 50%;">
-				<div class="content-video" style="margin-bottom: 12px">
+				<div class="content-video" style="margin-bottom: 0.1em">
 					<div class="content-video-container">
 						<video playsinline="" autoplay="" loop="" preload="" muted="" width="45%">
 							<source src="videos/dmc/simbav2-humanoid-stand.mp4" type="video/mp4"/>
@@ -213,10 +214,10 @@
 						</video>
 					</div>
 				</div>
-				<p style="margin-top: 10px; font-weight: bold;">DeepMind Control Suite</span></p>
+				<p style="margin-top: 10px; font-weight: bold; font-size: min(1.0em, 2.5vw);">DMControl</span></p>
 			</div>
 			<div style="display: flex; flex-direction: column; align-items: center; width: 50%;">
-				<div class="content-video" style="margin-bottom: 12px">
+				<div class="content-video" style="margin-bottom: 0.1em">
 					<div class="content-video-container">
 						<video playsinline="" autoplay="" loop="" preload="" muted="" width="45%">
 							<source src="videos/myosuite/simbav2-myo-key-hard.mp4" type="video/mp4"/>
@@ -232,10 +233,10 @@
 						</video>
 					</div>
 				</div>
-				<p style="margin-top: 10px; font-weight: bold;">MyoSuite</p>
+				<p style="margin-top: 10px; font-weight: bold; font-size: min(1.0em, 2.5vw);">MyoSuite</p>
 			</div>
 			<div style="display: flex; flex-direction: column; align-items: center; width: 50%;">
-				<div class="content-video" style="margin-bottom: 12px">
+				<div class="content-video" style="margin-bottom: 0.1em">
 					<div class="content-video-container">
 						<video playsinline="" autoplay="" loop="" preload="" muted="" width="45%">
 							<source src="videos/hbench/simbav2-h1-crawl.mp4" type="video/mp4"/>
@@ -251,7 +252,7 @@
 						</video>
 					</div>
 				</div>
-				<p style="margin-top: 10px; font-weight: bold;">HumanoidBench</span></p>
+				<p style="margin-top: 10px; font-weight: bold; font-size: min(1.0em, 2.5vw);">HumanoidBench</span></p>
 			</div>
 		</div>
 		<div class="wrap-collabsible">
@@ -259,7 +260,7 @@
 			<label for="collapsible-online" class="lbl-toggle">Click to see the score table ($4$ domains)</label>
 			<div class="collapsible-online-content">
 			  <div class="content-inner">
-				<div class="figure" style="height: 568px; background-image: url(images/online.png);"></div>
+				<div class="figure" style="height: 36em; background-image: url(images/online.png);"></div>
 			  </div>
 			</div>
 		</div>		
@@ -287,7 +288,7 @@
 	<div class="hr"></div>
 	<div style="padding-bottom: 64px; text-align: center;">
 		<h2>Citation</h2>
-		<p>
+		<p class="citation">
 			If you find our work useful, please consider citing the paper as follows:
 		</p>
 		<div id="bibtex-text" class="bibtexsection" onClick="window.getSelection().selectAllChildren(document.getElementById('bibtex-text'));">
