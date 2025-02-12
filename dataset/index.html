@@ -3,6 +3,14 @@
 	<meta property="og:title" content="SimbaV2:">
 	<meta property="og:description" content="Hyperspherical Normalization for Scalable Deep Reinforcement Learning">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script>
+		window.onload = function() {
+			if (screen.width < 450) {
+				var mvp = document.getElementById('vp');
+				mvp.setAttribute('content','user-scalable=no,width=450');
+			}
+		}
+	</script>
 	<link rel="stylesheet" href="./css/bulma-carousel.min.css">
 	<link rel="stylesheet" href="./css/bulma-slider.min.css">
 	<link rel="stylesheet" href="./css/bulma.min.css">
@@ -71,13 +79,13 @@
 		<table class="models">
 			<tbody>
 				<tr>
-					<th style="font-size: 1em;">Domains</th>
-					<th style="font-size: 1em;">Tasks</th>
-					<th style="font-size: 1em;">Embodiments</th>
-					<th style="font-size: 1em;">Episodes</th>
-					<th style="font-size: 1em;">Transitions</th>
-					<th style="font-size: 1em;">Size</th>
-					<th style="font-size: 1em;">Download</th>
+					<th style="font-size: 0.8em;">Domains</th>
+					<th style="font-size: 0.8em;">Tasks</th>
+					<th style="font-size: 0.8em;">Embodiments</th>
+					<th style="font-size: 0.8em;">Episodes</th>
+					<th style="font-size: 0.8em;">Transitions</th>
+					<th style="font-size: 0.8em;">Size</th>
+					<th style="font-size: 0.8em;">Download</th>
 				</tr>
 				<tr class="models">
 					<td>
@@ -87,19 +95,19 @@
 						<br/>
 						<span style="font-size:0.8em;">DMControl</span>
 					</td>
-					<td style="font-size: 1em;">
+					<td style="font-size: 0.8em;">
 						30
 					</td>
-					<td style="font-size: 1em;">
+					<td style="font-size: 0.8em;">
 						11
 					</td>
-					<td style="font-size: 1em;">
+					<td style="font-size: 0.8em;">
 						690k
 					</td>
-					<td style="font-size: 1em;">
+					<td style="font-size: 0.8em;">
 						345M
 					</td>
-					<td style="font-size: 1em;">
+					<td style="font-size: 0.8em;">
 						20GB
 					</td>
 					<td>
@@ -339,8 +347,8 @@
 						<tr>
 							<th></th>
 							<th style="font-size: 1em;">Task <span style="color: #868686; font-size: 0.7em">&#x25B2;</span></th>
-							<th style="font-size: 1em;">Observation</th>
-							<th style="font-size: 1em;">Action</th>
+							<th style="font-size: 1em;">$\vert \mathcal{O} \vert$</th>
+							<th style="font-size: 1em;">$\vert \mathcal{A} \vert$</th>
 						</tr>
 						<tr class="models">
 							<td>
