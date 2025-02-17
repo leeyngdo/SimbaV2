@@ -97,6 +97,19 @@ input[type='checkbox'] {
 .toggle:checked + .lbl-toggle::before {
     transform: rotate(90deg) translateX(-3px);
 }
+/* MuJoCo Table */
+.collapsible-mujoco-content {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+}
+.collapsible-mujoco-content .content-inner {
+    margin-top: 0.0rem;
+}
+.toggle:checked + .lbl-toggle + .collapsible-mujoco-content {
+    max-height: 1000vh;
+}
+/* DMC Table */
 .collapsible-dmc-content {
     max-height: 0px;
     overflow: hidden;
@@ -108,6 +121,32 @@ input[type='checkbox'] {
 .toggle:checked + .lbl-toggle + .collapsible-dmc-content {
     max-height: 1000vh;
 }
+
+/* MyoSuite Table */
+.collapsible-myosuite-content {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+}
+.collapsible-myosuite-content .content-inner {
+    margin-top: 0.0rem;
+}
+.toggle:checked + .lbl-toggle + .collapsible-myosuite-content {
+    max-height: 1000vh;
+}
+/* HBench Table */
+.collapsible-hbench-content {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+}
+.collapsible-hbench-content .content-inner {
+    margin-top: 0.0rem;
+}
+.toggle:checked + .lbl-toggle + .collapsible-hbench-content {
+    max-height: 1000vh;
+}
+
 .toggle:checked + .lbl-toggle {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
