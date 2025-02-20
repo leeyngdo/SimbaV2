@@ -4,7 +4,6 @@
 	<meta property="og:description" content="Hyperspherical Normalization for Scalable Deep Reinforcement Learning">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="./css/bulma-carousel.min.css">
-	<link rel="stylesheet" href="./css/bulma-slider.min.css">
 	<link rel="stylesheet" href="./css/bulma.min.css">
 	<link rel="stylesheet" href="./css/style.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro">
@@ -26,8 +25,7 @@
     </script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="./js/bulma-carousel.min.js"></script>
-	<script src="./js/bulma-slider.min.js"></script>
+	<script src="./js/bulma-carousel.js"></script>
 	<script src="./js/index.js"></script>
 </head>
 
@@ -222,8 +220,8 @@
 							</video>
 							<p>HalfCheetah</p>
 						</div>
-						<div class="item item-cheetah-v4">
-							<video poster="" id="cheetah-v4" autoplay controls muted loop playsinline width="100%">
+						<div class="item item-hopper-v4">
+							<video poster="" id="hopper-v4" autoplay controls muted loop playsinline width="100%">
 							<source src="videos/mujoco/simbav2-hopper-v4.mp4"
 									type="video/mp4">
 							</video>
@@ -246,12 +244,12 @@
 					</div>
 				</div>
 			</div>
-		</div></br>
+		</div>
 		<!-- MuJoCo Table -->
 		<div class="wrap-collabsible">
 			<input id="collapsible-mujoco" class="toggle" type="checkbox">
 			<label for="collapsible-mujoco" class="lbl-toggle" style="font-size: min(1.2em, 4.5vw);">MuJoCo Full List ($5$ tasks)</label>
-			<div class="collapsible-dmc-content">
+			<div class="collapsible-mujoco-content">
 			  	<div class="content-inner">
 					<table class="models">
 						<tbody>
@@ -1101,7 +1099,7 @@
 		<div class="wrap-collabsible">
 			<input id="collapsible-myosuite" class="toggle" type="checkbox">
 			<label for="collapsible-myosuite" class="lbl-toggle" style="font-size: min(1.2em, 4.5vw);">MyoSuite Full List ($10$ tasks)</label>
-			<div class="collapsible-dmc-content">
+			<div class="collapsible-myosuite-content">
 				<div class="content-inner">
 					<table class="models">
 						<tbody>
@@ -1387,7 +1385,7 @@
 		<div class="wrap-collabsible">
 			<input id="collapsible-hbench" class="toggle" type="checkbox">
 			<label for="collapsible-hbench" class="lbl-toggle" style="font-size: min(1.2em, 4.5vw);">HumanoidBench Full List ($14$ tasks)</label>
-			<div class="collapsible-dmc-content">
+			<div class="collapsible-hbench-content">
 				<div class="content-inner">
 					<table class="models">
 						<tbody>

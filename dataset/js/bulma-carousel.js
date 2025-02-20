@@ -779,7 +779,7 @@ var bulmaCarousel = function (_EventEmitter) {
         return;
       }
 
-      if (typeof index === 'Number') {
+      if (typeof index === 'number') {
         this.state.next = index;
       }
 
@@ -1732,7 +1732,7 @@ var Pagination = function () {
 				e.preventDefault();
 			}
 
-			this.slider.state.next = e.currentTarget.dataset.index;
+			this.slider.state.next = parseInt(e.currentTarget.dataset.index, 10);
 			this.slider.show();
 		}
 	}, {

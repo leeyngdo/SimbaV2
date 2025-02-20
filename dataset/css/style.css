@@ -146,7 +146,6 @@ input[type='checkbox'] {
 .toggle:checked + .lbl-toggle + .collapsible-hbench-content {
     max-height: 1000vh;
 }
-
 .toggle:checked + .lbl-toggle {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
